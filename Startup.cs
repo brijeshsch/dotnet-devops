@@ -53,6 +53,9 @@ namespace dotnet_devops
             app.UseCookiePolicy();
 
             app.UseMvc();
+            app.Use((ctx, next) => {
+                return ctx.Response.WriteAsync(ctx.Request.Path);
+            });
         }
     }
 }
