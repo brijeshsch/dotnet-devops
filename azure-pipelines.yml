@@ -23,3 +23,8 @@ steps:
     zipAfterPublish: True
 - task: PublishBuildArtifacts@1
   displayName: 'publish artifacts'
+- task: PublishBuildArtifacts@1
+  displayName: 'publish template'
+  inputs:
+    pathToPublish: '$(Build.SourcesDirectory)/arm-template'
+    artifactName: 'ArmTemplate'
