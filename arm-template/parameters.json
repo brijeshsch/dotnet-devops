@@ -8,6 +8,9 @@
         "linuxFxVersion": {
             "value": "DOTNETCORE|2.1"
         },
+        "startup": {
+            "value": "dotnet dotnet-devops.dll"
+        },
         "hostingPlanName": {
             "value": "S1-damo"
         },

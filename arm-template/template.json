@@ -8,6 +8,9 @@
         "linuxFxVersion": {
             "type": "String"
         },
+        "startup": {
+            "type": "String"
+        },
         "hostingPlanName": {
             "type": "String"
         },
@@ -43,7 +46,8 @@
                 "name": "[parameters('name')]",
                 "siteConfig": {
                     "appSettings": [],
-                    "linuxFxVersion": "[parameters('linuxFxVersion')]"
+                    "linuxFxVersion": "[parameters('linuxFxVersion')]",
+                    "appCommandLine": "[parameters('startup')]"
                 },
                 "serverFarmId": "[concat('/subscriptions/', parameters('subscriptionId'),'/resourcegroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
                 "hostingEnvironment": "[parameters('hostingEnvironment')]"
